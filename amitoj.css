@@ -1,0 +1,61 @@
+.clock{
+    width:200px;
+    height: 200px;
+    background-color: #cff ;
+    border-radius: 50%;        /*makes circle*/
+    border: 3px solid brown;
+    position: relative; /*we can set numbers anywhere in the clock*/
+}
+
+.point{
+    position: absolute;
+    background-color: brown;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.number{
+    /* --r:60; */
+    width: 100%; /*height and width of the number is also 200px*/
+    height: 100%;
+    /* background-color: red; */
+    /*border: 1px solid black; forms blocks*/
+    position: absolute; /* all with get fix on their given position */
+    text-align: center ;
+    transform: rotate(calc(var(--r)*1deg)); /*rotates the numbers */
+
+}
+
+.N1 {--r:30;}
+.N2 {--r:60;}
+.N3 {--r:90;}
+.N4 {--r:120;}
+.N5 {--r:150;}
+.N6 {--r:180;}
+.N7 {--r:210;}
+.N8 {--r:240;}
+.N9 {--r:270;}
+.N10 {--r:300;}
+.N11 {--r:330;}
+.N12 {--r:360;}
+
+.set{
+    --r:0; /* to avoid time lap*/
+    position: absolute;
+    /* width: 5px;
+    height: 40%; 
+    background-color: red; */
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%) rotate(calc(var(--r)*1deg)); /*(x,y) (-50%, 50%)  //  rotate(30deg)*/
+    transform-origin: bottom; /*makes centre at centre*/
+    border-radius: 100%;
+}
+
+.H{ width: 8px; height: 30%; background-color: black; }
+.M{ width: 5px; height: 38%; background-color: black; }
+.S{ width: 2px; height: 48%; background-color: black; }
